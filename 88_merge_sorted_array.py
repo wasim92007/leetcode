@@ -17,6 +17,7 @@ class Solution:
                 i = m
                 j = n
                 
+                ## We will start filling from the end
                 while i > 0 and j > 0:
                     if nums1[i-1] > nums2[j-1]:
                         nums1[f] = nums1[i-1]
@@ -25,6 +26,14 @@ class Solution:
                         nums1[f] = nums2[j-1]
                         j -= 1; f -= 1
                         
+                ## We will fill the rest of the nums1 with leftover of 
+                ## nums2
+                
                 while j > 0:
                     nums1[f] = nums2[j-1]
                     j -= 1; f -=1
+                    
+                    
+                ## if nums2 is exhausted that means the numbers in nums1
+                ## must be less than that of nums2. Hence similar while
+                ## loop is not required for nums1 as they are already in place.
