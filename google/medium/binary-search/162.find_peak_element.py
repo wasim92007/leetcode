@@ -53,6 +53,37 @@
 # @lc code=start
 class Solution:
     def findPeakElement(self, nums: List[int]) -> int:
+
+        l = len(nums)
+        lp, rp = 0 , l -1
+
+        while lp <= rp:
+            ## Find the middle point
+            m = lp + (rp-lp+1)//2
+            ##Check if mid is not at the extreme end
+            if m > 0 and m < l - 1:
+                if nums[m] > nums[m-1] and nums[m] > nums[m+1]:
+                    return m
+                else:
+                    if nums[m-1] < nums[m]:
+                        l = m 
+                    else:
+                        r = m
+            else:
+                if m == 0:
+                    if nums[m] > nums[m+1]:
+                        return m
+                    else:
+                        return 1
+                elif m == l -1:
+                    if nums[m] > nums[m-1]:
+                        return m
+                    else:
+                        return m - 1
+
+
+
+
         
 # @lc code=end
 
