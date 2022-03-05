@@ -1,7 +1,7 @@
 #
 # @lc app=leetcode id=268 lang=python3
 #
-# [268] Missing Number
+#   [268] Missing Number
 #
 # https://leetcode.com/problems/missing-number/description/
 #
