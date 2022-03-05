@@ -62,6 +62,7 @@ class Solution:
     def preorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
 
         ## Preorder traversal is root->left->right
+        ## https://www.youtube.com/watch?v=RJhh3Jcc9zw
         ## Algorithm 2: We will use iteration
         ## We will be using stack: stack is last in first out
         ## We will put in stack = [right, left]
